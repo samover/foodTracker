@@ -16,7 +16,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
-
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.delegate = self
@@ -26,7 +27,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
 
@@ -56,9 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     
     // MARK: Actions
-    @IBAction func setDefaultLabelText(sender: AnyObject) {
-        mealNameLabel.text = "Default Text"
-    }
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
         nameTextField.resignFirstResponder()
         let imagePickerController = UIImagePickerController()
